@@ -1306,6 +1306,19 @@ section[id] {
 }
 
 @media (max-width: 760px) {
+  .mobile-controls {
+    display: flex;
+    bottom: 92px;
+    padding: 0 0.6rem;
+  }
+
+  .touch-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+  }
+
+
   .topbar {
     flex-wrap: wrap;
   }
@@ -1389,5 +1402,53 @@ section[id] {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+
+.mobile-controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 104px;
+  display: none;
+  justify-content: space-between;
+  padding: 0 0.75rem;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.touch-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 900;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(8px);
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.touch-btn:active {
+  transform: translateY(1px) scale(0.98);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+
+@media (max-width: 760px) {
+  .mobile-controls {
+    display: flex !important;
+    bottom: 92px;
+    padding: 0 0.6rem;
+  }
+
+  .touch-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
   }
 }

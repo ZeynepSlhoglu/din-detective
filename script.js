@@ -267,6 +267,8 @@ const els = {
   comboValue: document.getElementById("comboValue"),
   arena: document.getElementById("gameArena"),
   arenaHint: document.querySelector(".arena-hint"),
+  touchLeftBtn: document.getElementById("touchLeftBtn"),
+  touchRightBtn: document.getElementById("touchRightBtn"),
   catchBag: document.getElementById("catchBag"),
   bagCollected: document.getElementById("bagCollected"),
   gameSide: document.getElementById("gameSide"),
@@ -331,6 +333,11 @@ function setLanguage(lang) {
   updateStatsUI();
   updateItemAriaLabels();
   updateInfoToggleLabel();
+}
+
+function setMoveInput(direction, pressed) {
+  if (direction === "left") game.keys.left = pressed;
+  if (direction === "right") game.keys.right = pressed;
 }
 
 function updateStatsUI() {
@@ -831,21 +838,58 @@ els.langButtons.forEach((btn) => {
   btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
 });
 
+function bindTouchMoveButton(button, direction) {
+  if (!button) return;
+
+  const press = (event) => {
+    setMoveInput(direction, true);
+    if (event && typeof event.preventDefault === "function") event.preventDefault();
+  };
+
+  const release = (event) => {
+    setMoveInput(direction, false);
+    if (event && typeof event.preventDefault === "function") event.preventDefault();
+  };
+
+  button.addEventListener("pointerdown", press);
+  button.addEventListener("pointerup", release);
+  button.addEventListener("pointercancel", release);
+  button.addEventListener("pointerleave", release);
+
+  // Fallback for some mobile browsers that still rely on Touch Events.
+  button.addEventListener("touchstart", press, { passive: false });
+  button.addEventListener("touchend", release, { passive: false });
+  button.addEventListener("touchcancel", release, { passive: false });
+}
+
+bindTouchMoveButton(els.touchLeftBtn, "left");
+bindTouchMoveButton(els.touchRightBtn, "right");
+
+window.addEventListener("pointerup", () => {
+  setMoveInput("left", false);
+  setMoveInput("right", false);
+});
+
+window.addEventListener("blur", () => {
+  setMoveInput("left", false);
+  setMoveInput("right", false);
+});
+
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") {
-    game.keys.left = true;
+    setMoveInput("left", true);
     event.preventDefault();
   } else if (event.key === "ArrowRight") {
-    game.keys.right = true;
+    setMoveInput("right", true);
     event.preventDefault();
   }
 });
 
 window.addEventListener("keyup", (event) => {
   if (event.key === "ArrowLeft") {
-    game.keys.left = false;
+    setMoveInput("left", false);
   } else if (event.key === "ArrowRight") {
-    game.keys.right = false;
+    setMoveInput("right", false);
   }
 });
 
