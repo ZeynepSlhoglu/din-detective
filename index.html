@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIN Dedektifi | DIN Detective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true">
+    <div class="grid-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">DIN</div>
+      <div>
+        <p class="brand-title">DIN Dedektifi</p>
+        <p class="brand-subtitle">Deutsches Institut für Normung</p>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <nav class="lang-switch" aria-label="Dil / Sprache">
+        <button class="lang-btn is-active" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="tr" type="button">TR</button>
+        <button class="lang-btn" data-lang="de" type="button">DE</button>
+      </nav>
+      <a class="cta-ghost" href="#game" data-i18n="navPlay">Oyuna Geç</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">Standartlar = Güven + Düzen + Kolaylık</p>
+        <h1 data-i18n="heroTitle">DIN nedir? Günlük hayatta neden önemlidir?</h1>
+        <p class="hero-lead" data-i18n="heroLead">
+          DIN, ürünlerin daha güvenli, anlaşılır ve uyumlu olmasına yardımcı olan standartlar geliştirir.
+          Bu siteyle DIN'i keşfet, sonra mini oyunda yanlış etiketleri yakala!
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#game" data-i18n="startGame">Oyunu Başlat</a>
+          <a class="btn btn-secondary" href="#learn" data-i18n="learnMore">Önce Öğren</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge" data-i18n="badge1">10-18 yaş için</span>
+          <span class="badge" data-i18n="badge2">Mini oyunlu öğrenme</span>
+          <span class="badge" data-i18n="badge3">TR / DE destekli</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="machine-card">
+          <div class="machine-header">
+            <span>STANDARD CHECK</span>
+            <span class="pulse-dot"></span>
+          </div>
+          <div class="machine-screen">
+            <div class="scan-bottle good">
+              <div class="bottle-cap"></div>
+              <div class="bottle-body">
+                <div class="label label-good">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="scan-tag ok">OK</div>
+            </div>
+            <div class="scan-bottle bad">
+              <div class="bottle-cap"></div>
+              <div class="bottle-body">
+                <div class="label label-bad">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="scan-tag warn">!</div>
+            </div>
+            <div class="scanner-line"></div>
+          </div>
+          <div class="machine-footer">
+            <div class="meter">
+              <div class="meter-fill"></div>
+            </div>
+            <div class="meter-label" data-i18n="visualCaption">Kontrol ediliyor...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn" class="section info-grid">
+      <article class="info-panel intro">
+        <h2 data-i18n="whatIsDinTitle">DIN ne yapar?</h2>
+        <p data-i18n="whatIsDinText">
+          DIN (Deutsches Institut für Normung), birçok alanda standartlar geliştirerek ürünlerin ve bilgilerin
+          daha anlaşılır, güvenli ve uyumlu olmasına katkı sağlar.
+        </p>
+        <ul class="key-points">
+          <li data-i18n="kp1">Aynı sembol ve işaretlerin herkesçe anlaşılmasını destekler.</li>
+          <li data-i18n="kp2">Güvenlik ve kaliteyi güçlendiren ortak kurallar sağlar.</li>
+          <li data-i18n="kp3">Günlük yaşamda karışıklığı azaltır.</li>
+        </ul>
+      </article>
+
+      <article class="info-panel cards">
+        <h3 data-i18n="dailyLifeTitle">Günlük hayatta DIN etkisi</h3>
+        <div class="card-list">
+          <div class="mini-card">
+            <div class="mini-icon">🛟</div>
+            <h4 data-i18n="cardSafetyTitle">Güvenlik</h4>
+            <p data-i18n="cardSafetyText">Uyarılar, semboller ve ölçüler daha net olur.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-icon">🧩</div>
+            <h4 data-i18n="cardFitTitle">Uyumluluk</h4>
+            <p data-i18n="cardFitText">Parçalar ve bilgiler birlikte daha iyi çalışır.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-icon">🧭</div>
+            <h4 data-i18n="cardClarityTitle">Anlaşılırlık</h4>
+            <p data-i18n="cardClarityText">Etiketler ve işaretler daha kolay okunur.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="info-panel examples">
+        <h3 data-i18n="exampleTitle">Nerelerde görürüz?</h3>
+        <div class="example-lines">
+          <div class="example-line">
+            <span class="dot"></span>
+            <p data-i18n="ex1">Ürün etiketlerinde içerik ve uyarı bilgileri</p>
+          </div>
+          <div class="example-line">
+            <span class="dot"></span>
+            <p data-i18n="ex2">Teknik çizimler ve ölçülendirmeler</p>
+          </div>
+          <div class="example-line">
+            <span class="dot"></span>
+            <p data-i18n="ex3">Güvenlik işaretleri ve semboller</p>
+          </div>
+          <div class="example-line">
+            <span class="dot"></span>
+            <p data-i18n="ex4">Okul, laboratuvar ve üretim alanlarındaki düzen</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="game" class="section game-section">
+      <div class="game-head">
+        <div>
+          <p class="eyebrow" data-i18n="gameEyebrow">Mini Oyun</p>
+          <h2 data-i18n="gameTitle">Yanlış Etiketi Yakala</h2>
+          <p class="game-subtitle" data-i18n="gameSubtitle">
+            Amaç: Sarı torbayı sağ-sol ok tuşlarıyla hareket ettir ve hatalı etiketli şişeleri yakala.
+          </p>
+        </div>
+        <div class="game-controls">
+          <button id="resetBtn" class="btn btn-secondary" type="button" data-i18n="resetRound">Sıfırla</button>
+          <button id="toggleInfoBtn" class="btn btn-secondary" type="button">Paneli Gizle</button>
+        </div>
+      </div>
+
+      <div class="game-layout">
+        <div class="game-arena-wrap">
+          <div class="game-stats" aria-live="polite">
+            <div class="stat-card">
+              <span class="stat-label" data-i18n="scoreLabel">Puan</span>
+              <strong id="scoreValue">0</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label" data-i18n="timeLabel">Süre</span>
+              <strong id="timeValue">90</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label" data-i18n="comboLabel">Seri</span>
+              <strong id="comboValue">0</strong>
+            </div>
+          </div>
+
+          <div id="gameArena" class="game-arena" role="application" aria-label="Etiket yakalama oyunu alanı">
+            <div class="arena-grid" aria-hidden="true"></div>
+            <div class="arena-hint">
+              <p data-i18n="arenaHint">Başlat'a bas ve sarı torbayı sağ-sol oklarla hareket ettir.</p>
+              <button id="startBtn" class="btn btn-primary" type="button" data-i18n="startRound">Başlat</button>
+            </div>
+            <div id="catchBag" class="catch-bag" aria-hidden="true">
+              <div class="bag-handle"></div>
+              <div class="bag-mouth"></div>
+              <div class="bag-body">
+                <div class="bag-label">Gelber Sack</div>
+                <div id="bagCollected" class="bag-collected"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside id="gameSide" class="game-side">
+          <div class="rule-card">
+            <h3 data-i18n="rulesTitle">Kurallar</h3>
+            <ul>
+              <li data-i18n="rule1">Yanlış etiketliyi yakala: +10 puan</li>
+              <li data-i18n="rule2">Doğru etiketi yanlış yakala: -5 puan</li>
+              <li data-i18n="rule3">Yanlış etiketi kaçırma: -8 puan</li>
+              <li data-i18n="rule4">Üst üste doğru seçimlerde bonus kazan</li>
+            </ul>
+          </div>
+          <div class="fact-card">
+            <div class="fact-head">
+              <span data-i18n="factTitle">DIN Bilgisi</span>
+              <span id="factBadge" class="fact-badge">#1</span>
+            </div>
+            <p id="factText" data-i18n="factDefault">
+              Standartlar, farklı insanların aynı bilgiyi aynı şekilde anlamasına yardımcı olur.
+            </p>
+          </div>
+          <div class="legend-card">
+            <h3 data-i18n="legendTitle">İşaretler</h3>
+            <div class="legend-row">
+              <span class="legend-pill good"></span>
+              <span data-i18n="legendGood">Düzenli / doğru etiket</span>
+            </div>
+            <div class="legend-row">
+              <span class="legend-pill bad"></span>
+              <span data-i18n="legendBad">Hatalı / eksik etiket</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="result-panel" id="resultPanel" hidden>
+        <div class="result-card">
+          <div id="resultVisual" class="result-visual" aria-hidden="true">
+            <div class="result-visual-ring"></div>
+            <div id="resultEmoji" class="result-emoji">🎯</div>
+            <div class="result-spark spark-1">✦</div>
+            <div class="result-spark spark-2">✦</div>
+            <div class="result-spark spark-3">✦</div>
+          </div>
+          <p class="eyebrow" data-i18n="resultEyebrow">Tur Tamamlandı</p>
+          <h3 id="resultTitle" data-i18n="resultTitleDefault">Standart Avcısı!</h3>
+          <p id="resultScoreText"></p>
+          <p id="resultMoodText" class="result-mood"></p>
+          <p id="resultGradeText"></p>
+          <button id="playAgainBtn" class="btn btn-primary" type="button" data-i18n="playAgain">Tekrar Oyna</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footerText">
+      Eğitim amaçlı hazırlanmış tanıtım konsepti • DIN hakkında merak uyandırmak için mini deneyim
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
